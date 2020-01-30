@@ -1,0 +1,346 @@
+package com.mjgallery.mjgallery.app.view.dialog;
+
+import android.app.Activity;
+
+import android.text.Editable;
+import android.text.TextUtils;
+import android.text.TextWatcher;
+import android.view.KeyEvent;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+
+import com.jess.arms.utils.ArmsUtils;
+import com.mjgallery.mjgallery.R;
+import com.mjgallery.mjgallery.app.utils.PhoneFormatCheckUtils;
+import com.mjgallery.mjgallery.event.CloseWXEvent;
+import com.mjgallery.mjgallery.widget.CountDownTextView;
+
+import org.simple.eventbus.EventBus;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.TimeUnit;
+
+import butterknife.OnClick;
+
+/**
+ * 忘记密码
+ */
+public class ChangePasswordDialog extends BaseDialog implements View.OnClickListener {
+    EditText etChangePasswordPhone;
+    CountDownTextView countDownTextView;
+    EditText etChangePasswordCode;
+    EditText etChangePasswordOne;
+    EditText etChangePasswordTwo;
+    TextView btnChangePassword;
+    TextView tvChangePasswordPhone;
+    TextView tvChangePasswordPwdOne;
+    TextView tvChangePasswordPwdTwo;
+    LinearLayout llAll;
+    LinearLayout llAllTwo;
+    IChangePassword iChangePassword;
+    boolean isJump=false;
+
+    public ChangePasswordDialog(@NonNull Activity context, IChangePassword iChangePassword) {
+        super(context);
+        init();
+        this.iChangePassword = iChangePassword;
+        setCanceledOnTouchOutside(true);
+    }
+
+    private void init() {
+        setContentView(R.layout.dialog_change_password);
+        etChangePasswordPhone = findViewById(R.id.etChangePasswordPhone);
+        llAll = findViewById(R.id.llAll);
+        llAllTwo = findViewById(R.id.llAllTwo);
+        tvChangePasswordPwdOne = findViewById(R.id.tvChangePasswordPwdOne);
+        tvChangePasswordPhone = findViewById(R.id.tvChangePasswordPhone);
+        tvChangePasswordPwdTwo = findViewById(R.id.tvChangePasswordPwdTwo);
+        countDownTextView = findViewById(R.id.countDownTextView);
+        etChangePasswordCode = findViewById(R.id.etChangePasswordCode);
+        etChangePasswordOne = findViewById(R.id.etChangePasswordOne);
+        etChangePasswordTwo = findViewById(R.id.etChangePasswordTwo);
+        btnChangePassword = findViewById(R.id.btnChangePassword);
+        llAll.setOnClickListener(this);
+        llAllTwo.setOnClickListener(this);
+        btnChangePassword.setOnClickListener(this);
+        setChangedListener();
+        setBtnEnabled(false);
+
+    }
+
+
+    @OnClick({R.id.llAll, R.id.btnChangePassword})
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.btnChangePassword:
+                Map<String, Object> map = new HashMap<>();
+                map.put("phoneNo", etChangePasswordPhone.getText().toString());
+                map.put("password", etChangePasswordOne.getText().toString());
+                map.put("validateCode", etChangePasswordCode.getText().toString());
+                if (iChangePassword != null) {
+                    isJump=true;
+                    iChangePassword.onChangePassword(map);
+                }
+                break;
+            case R.id.llAll:
+                if (iChangePassword != null) {
+                    iChangePassword.onChangePasswordDismiss();
+                }
+
+                break;
+            case R.id.llAllTwo:
+                break;
+        }
+    }
+
+
+    public void showDialog() {
+        isJump=false;
+        tvChangePasswordPwdOne.setVisibility(View.INVISIBLE);
+        tvChangePasswordPhone.setVisibility(View.INVISIBLE);
+        tvChangePasswordPwdTwo.setVisibility(View.INVISIBLE);
+        setBtnEnabled(false);
+        countDownTextView
+                .setNormalText("获取验证码")
+                .setCountDownText("", "s")
+                .setCloseKeepCountDown(false)//关闭页面保持倒计时开关
+                .setCountDownClickable(false)//倒计时期间点击事件是否生效开关
+                .setShowFormatTime(false)//是否格式化时间
+                .setIntervalUnit(TimeUnit.SECONDS)
+                .setOnCountDownStartListener(new CountDownTextView.OnCountDownStartListener() {
+                    @Override
+                    public void onStart() {
+//                        Toast.makeText(MainActivity.this, "开始计时", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setOnCountDownTickListener(new CountDownTextView.OnCountDownTickListener() {
+                    @Override
+                    public void onTick(long untilFinished) {
+//                        Log.e("------", "onTick: " + untilFinished);
+                    }
+                })
+                .setOnCountDownFinishListener(new CountDownTextView.OnCountDownFinishListener() {
+                    @Override
+                    public void onFinish() {
+//                        Toast.makeText(MainActivity.this, "倒计时完毕", Toast.LENGTH_SHORT).show();
+                    }
+                })
+                .setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Map<String, Object> map = new HashMap<>();
+                        if (TextUtils.isEmpty(etChangePasswordPhone.getText().toString())
+                                && PhoneFormatCheckUtils.isChinaPhoneLegal(etChangePasswordPhone.getText().toString())) {
+                            ArmsUtils.makeText(getContext(),"请输入正确的手机号码");
+                            return;
+                        }
+                        map.put("mobile", etChangePasswordPhone.getText().toString());
+                        map.put("type", 13);
+                        if (iChangePassword != null) {
+                            iChangePassword.onSendCode(map);
+                        }
+//                        Toast.makeText(MainActivity.this, "短信已发送", Toast.LENGTH_SHORT).show();
+
+                    }
+                });
+
+        etChangePasswordCode.setText("");
+        etChangePasswordOne.setText("");
+        etChangePasswordPhone.setText("");
+        etChangePasswordTwo.setText("");
+        showTop();
+    }
+
+    private void setBtnEnabled(boolean isEnabled) {
+        if(isEnabled)
+            btnChangePassword.setBackgroundResource(R.drawable.btn_0eb4fe_10_bg);
+        else
+            btnChangePassword.setBackgroundResource(R.drawable.btn_0eb4fe_10_bg_normal);
+        btnChangePassword.setEnabled(isEnabled);
+    }
+
+
+    private void setChangedListener() {
+        etChangePasswordPhone.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (!TextUtils.isEmpty(s)) {
+                    if (PhoneFormatCheckUtils.isChinaPhoneLegal(s.toString())) {
+                        tvChangePasswordPhone.setVisibility(View.INVISIBLE);
+                        if (!TextUtils.isEmpty(etChangePasswordCode.getText().toString())
+                                && !TextUtils.isEmpty(etChangePasswordOne.getText().toString())
+                                && !TextUtils.isEmpty(etChangePasswordTwo.getText().toString())
+                                && etChangePasswordOne.getText().toString().length() >= 6
+                                && etChangePasswordOne.getText().toString().
+                                equals(etChangePasswordTwo.getText().toString())) {
+                            setBtnEnabled(true);
+                        } else {
+                            setBtnEnabled(false);
+                        }
+                    } else {
+                        tvChangePasswordPhone.setVisibility(View.VISIBLE);
+                        setBtnEnabled(false);
+                    }
+
+                } else {
+                    setBtnEnabled(false);
+                }
+            }
+        });
+        etChangePasswordCode.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (!TextUtils.isEmpty(s)) {
+                    if (!TextUtils.isEmpty(etChangePasswordPhone.getText().toString())
+                            && !TextUtils.isEmpty(etChangePasswordOne.getText().toString())
+                            && !TextUtils.isEmpty(etChangePasswordTwo.getText().toString())
+                            && PhoneFormatCheckUtils.isChinaPhoneLegal(etChangePasswordPhone.getText().toString())
+                            && etChangePasswordOne.getText().toString().length() >= 6
+                            && etChangePasswordOne.getText().toString().
+                            equals(etChangePasswordTwo.getText().toString())) {
+                        setBtnEnabled(true);
+                    } else {
+                        setBtnEnabled(false);
+                    }
+
+
+                } else {
+                    setBtnEnabled(false);
+                }
+            }
+        });
+        etChangePasswordOne.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (!TextUtils.isEmpty(s)) {
+                    if (s.toString().length() >= 6) {
+                        tvChangePasswordPwdOne.setVisibility(View.INVISIBLE);
+                        if (s.toString().equals(etChangePasswordTwo.getText().toString()) && !TextUtils.isEmpty(etChangePasswordTwo.getText().toString())) {
+                            if (!TextUtils.isEmpty(etChangePasswordPhone.getText().toString()) &&
+                                    !TextUtils.isEmpty(etChangePasswordCode.getText().toString()) &&
+                                    PhoneFormatCheckUtils.isChinaPhoneLegal(etChangePasswordPhone.getText().toString())) {
+                                setBtnEnabled(true);
+                            } else {
+                                setBtnEnabled(false);
+                            }
+                        } else {
+                            tvChangePasswordPwdTwo.setVisibility(View.INVISIBLE);
+                        }
+
+
+                    } else {
+                        tvChangePasswordPwdOne.setVisibility(View.VISIBLE);
+                    }
+
+                } else {
+                    setBtnEnabled(false);
+                }
+            }
+        });
+        etChangePasswordTwo.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (!TextUtils.isEmpty(s)) {
+                    if (s.toString().length() >= 6 && s.toString().
+                            equals(etChangePasswordOne.getText().toString())) {
+                        tvChangePasswordPwdTwo.setVisibility(View.INVISIBLE);
+                        if (!TextUtils.isEmpty(etChangePasswordPhone.getText().toString())
+                                && !TextUtils.isEmpty(etChangePasswordCode.getText().toString())
+                                && PhoneFormatCheckUtils.isChinaPhoneLegal(etChangePasswordPhone.getText().toString())) {
+                            setBtnEnabled(true);
+                        } else {
+                            setBtnEnabled(false);
+                        }
+
+                    } else {
+                        tvChangePasswordPwdTwo.setVisibility(View.VISIBLE);
+                    }
+                } else {
+                    setBtnEnabled(false);
+                }
+            }
+        });
+
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if ((keyCode == KeyEvent.KEYCODE_BACK)) {
+            System.out.println("按下了back键   onKeyDown()");
+            isJump=false;
+            EventBus.getDefault().post(new CloseWXEvent());
+            return false;
+        } else {
+            return super.onKeyDown(keyCode, event);
+        }
+
+    }
+
+    public interface IChangePassword {
+        void onChangePassword(Map<String, Object> map);
+
+        void onChangePasswordDismiss();
+
+        void onSendCode(Map<String, Object> map);
+    }
+
+
+    public void startCountDown() {
+        countDownTextView.startCountDown(60);
+    }
+
+    @Override
+    public void dismiss() {
+        super.dismiss();
+        if (!isJump) {
+            if (iChangePassword != null) {
+                iChangePassword.onChangePasswordDismiss();
+            }
+        }
+    }
+}

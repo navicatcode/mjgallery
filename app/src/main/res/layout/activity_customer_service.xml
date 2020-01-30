@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ECECEC"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_top_bg">
+
+        <include layout="@layout/include_activity_top" />
+    </RelativeLayout>
+
+
+
+            <WebView
+                android:id="@+id/webViewSession"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:windowSoftInputMode="adjustResize"
+                android:layout_marginBottom="40dp"
+
+                />
+</LinearLayout>

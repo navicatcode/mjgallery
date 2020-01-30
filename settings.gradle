@@ -1,0 +1,2 @@
+include ':app', ':calendarview', "wheelview", "pickerview", ':Muti-Barrage', ':emojilibrary',
+        ':picture_library', ':ucrop', ':banner', ':videocompressor', ':uistatus'

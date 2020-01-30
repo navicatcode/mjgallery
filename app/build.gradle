@@ -1,0 +1,227 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 29
+    defaultConfig {
+        applicationId "com.mjgallery.mjgallery"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 13
+        versionName "1.2.2"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary true
+        multiDexEnabled true
+        resConfigs "zh", "zh-rTW" //只包含中文简体繁体和英文3种国际化
+
+        // armeabi armeabi -v7a armeabi 64 v8  X86 ;这四个文件夹 需要是 c/c++ so 库 四个文件夹是为了兼
+        // 容更多的机型 其实你只需要留一个 armeabi 的就可以了 v7 64 x86 你可以删了   arm 就能兼容 市场上
+        // 95% 的机型 如果你没有用语音 voip 文件夹中的 voip.so umcs.so 以及 assets 中的语音的 MP3 音频文
+        // 件也是你可以删除的 这样下来 apk 的最终大小增量是很少的
+        // 指定要ndk需要兼容的架构(这样其他依赖包里mips,x86,armeabi,aarm-v8之类的so会被过滤掉)
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi', 'armeabi-v7a'
+        }
+
+        packagingOptions {
+            exclude 'META-INF/proguard/androidx-annotations.pro'
+        }
+
+        manifestPlaceholders = [
+                JPUSH_PKGNAME: applicationId,
+                JPUSH_APPKEY : "ccdece0c5b4df291feb4561c", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
+        ]
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('mjgallery.jks')
+            storePassword "mjgallery"
+            keyAlias "mjgallery"
+            keyPassword "mjgallery"
+        }
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "boolean", "LOG_DEBUG", "true"
+            buildConfigField "boolean", "USE_CANARY", "true"
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        release {
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            buildConfigField "boolean", "USE_CANARY", "false"
+            minifyEnabled true
+            shrinkResources true
+            zipAlignEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+        disable "ResourceType"
+        abortOnError false
+    }
+
+    //java插件引入了一个概念叫做SourceSets，通过修改SourceSets中的属性，可以指定哪些源文件（或文件夹下的源文件）要被编译，哪些源文件要被排除。Gradle就是通过它实现Java项目的布局定义。
+    //SourceSets目录结构是固定的Java的标准项目目录布局
+    sourceSets {
+        main {
+            jni.srcDirs = []
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+        jumboMode = true
+        preDexLibraries = false
+        additionalParameters = [
+                '--multi-dex',//多分包
+                '--set-max-idx-number=60000'//每个包内方法数上限
+        ]
+    }
+
+}
+
+dependencies {
+
+    //    androidTestImplementation rootProject.ext.dependencies["espressoespresso-core"]
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation rootProject.ext.dependencies["espresso-core"]
+    implementation rootProject.ext.dependencies["gson"]
+    implementation rootProject.ext.dependencies["cardview-v7"]
+    implementation rootProject.ext.dependencies["annotations"]
+    implementation rootProject.ext.dependencies["design"]
+    implementation rootProject.ext.dependencies["support-v4"]
+    implementation rootProject.ext.dependencies["recyclerview-v7"]
+    implementation rootProject.ext.dependencies["photoview"]
+
+    //tools
+
+    //注意 Arms 核心库现在并不会依赖某个 EventBus, 要想使用 EventBus, 还请在项目中自行依赖对应的 EventBus
+
+    //现在支持两种 EventBus, greenrobot 的 EventBus 和畅销书 《Android源码设计模式解析与实战》的作者 何红辉 所作的 AndroidEventBus
+
+    //依赖后 Arms 会自动检测您依赖的 EventBus 并自动注册
+
+    //建议使用 AndroidEventBus, 特别是组件化项目, 原因请看 https://github.com/hehonghui/AndroidEventBus/issues/49
+
+    //这种做法可以让使用者有自行选择三方库的权利, 并且还可以减轻 Arms 的体积
+    implementation rootProject.ext.dependencies["androideventbus"]
+    implementation rootProject.ext.dependencies["appcompat"]
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0'
+    annotationProcessor rootProject.ext.dependencies["dagger2-compiler"]
+    implementation rootProject.ext.dependencies["progressmanager"]
+    implementation rootProject.ext.dependencies["retrofit-url-manager"]
+    implementation rootProject.ext.dependencies["lifecyclemodel"]
+    implementation rootProject.ext.dependencies["constraint-layout"]
+    implementation rootProject.ext.dependencies["smartrefresh"]
+    implementation rootProject.ext.dependencies["jessyan:arms"]
+
+    //support:multidex 分包
+    implementation rootProject.ext.dependencies["multidex"]
+
+    //view
+    implementation rootProject.ext.dependencies["paginate"]
+    implementation rootProject.ext.dependencies["butterknife"]
+    implementation rootProject.ext.dependencies["butterknife-compiler"]
+    annotationProcessor(rootProject.ext.dependencies["butterknife-compiler"]) {
+        exclude module: 'support-annotations'
+    }
+
+    //页面使用 AndroidAutoSize 进行适配
+    implementation rootProject.ext.dependencies["autosize"]
+
+    //Arms 核心库不再包含 Glide, 想使用其他图片加载框架或者想自行扩展 ImageLoaderStrategy 就不要依赖 arms-imageloader-glide
+
+    //依赖 arms-imageloader-glide 后还需要在 GlobalConfiguration 中手动注册 GlideImageLoaderStrategy
+    implementation rootProject.ext.dependencies["imageloader-glide"]
+
+    //test
+    testImplementation rootProject.ext.dependencies["junit"]
+
+    //base适配器
+    implementation rootProject.ext.dependencies["baseAdapter"]
+    implementation rootProject.ext.dependencies["wx_opensdk"]
+
+    //极光
+    implementation rootProject.ext.dependencies["jpush"]
+    implementation rootProject.ext.dependencies["jcore"]
+
+    //logger
+    implementation rootProject.ext.dependencies["logger"]
+
+    //底部导航栏
+    implementation rootProject.ext.dependencies["bottom-tab"]
+
+    //takephoto_library
+    implementation rootProject.ext.dependencies["takephoto_library"]
+
+    //tablayout
+    implementation rootProject.ext.dependencies["tablayout"]
+
+    //zxing
+    implementation rootProject.ext.dependencies["zxing"]
+
+    //utilcode
+    implementation rootProject.ext.dependencies["utilcode"]
+
+    //toggle
+    implementation rootProject.ext.dependencies["toggle"]
+
+    //retrofit_url_manager
+    implementation rootProject.ext.dependencies["retrofit_url_manager"]
+
+    //retrofit_converter-gson
+    implementation rootProject.ext.dependencies["retrofit_converter-gson"]
+
+    //retrofit-adapter-rxjava
+    implementation rootProject.ext.dependencies["retrofit-adapter-rxjava"]
+
+    //retrofit-adapter-rxjava2
+    implementation rootProject.ext.dependencies["retrofit-adapter-rxjava2"]
+
+    //ShadowLayout 阴影效果
+    implementation rootProject.ext.dependencies["ShadowLayout"]
+
+    // 可选，适用于Android的中国地区词典
+
+    //用来进行中文转成字母
+    implementation rootProject.ext.dependencies["tinypinyin"]
+    implementation rootProject.ext.dependencies["tinypinyin-lexicons"]
+    implementation rootProject.ext.dependencies["tencent.sonic"]
+
+    //自跟随控件的宽度进行缩小放大
+    implementation rootProject.ext.dependencies["AutoFitColorTextView"]
+    implementation rootProject.ext.dependencies["netty"]
+    implementation rootProject.ext.dependencies["drawable"]
+    implementation rootProject.ext.dependencies["protobuf"]
+    implementation rootProject.ext.dependencies["ShapedImageView"]
+    implementation rootProject.ext.dependencies["kprogresshud"]
+    implementation rootProject.ext.dependencies["richtext"]
+    debugImplementation rootProject.ext.dependencies["canary-debug"]
+    releaseImplementation rootProject.ext.dependencies["canary-release"]
+    testImplementation rootProject.ext.dependencies["canary-release"]
+    implementation project(path: ':calendarview')
+    implementation project(path: ':pickerview')
+    implementation project(path: ':wheelview')
+    implementation project(path: ':uistatus')
+    implementation project(path: ':Muti-Barrage')
+    implementation project(path: ':banner')
+    implementation project(path: ':emojilibrary')
+    implementation project(path: ':picture_library')
+    implementation fileTree(include: ['*.aar', '*.jar'], exclude: [], dir: 'libs')
+}

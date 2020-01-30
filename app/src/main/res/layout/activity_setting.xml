@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_top_bg">
+
+        <include layout="@layout/include_activity_top" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_ECECEC"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlAccountSecurity"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/item_bg"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/account_security"
+                android:textColor="@color/color_323232"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="9dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/setting_next_img" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlMessage"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/rlAccountSecurity"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/item_bg"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="13dp"
+                android:text="@string/message_remind"
+                android:textColor="@color/color_323232"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="9dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/setting_next_img" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bg01"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rlMessage"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="19dp"
+            android:background="@color/color_EFEFEF" />
+
+        <RelativeLayout
+            android:id="@+id/rlPrivacy"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/bg01"
+            android:background="@drawable/item_bg"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/privacy"
+                android:textColor="@color/color_323232"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="9dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/setting_next_img" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bg02"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rlPrivacy"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="19dp"
+            android:background="@color/color_EFEFEF" />
+
+        <RelativeLayout
+            android:id="@+id/rlClearCache"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/bg02"
+            android:background="@drawable/item_bg"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/clear_cache"
+                android:textColor="@color/color_323232"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/tvClearCache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:text="0.0M"
+                android:layout_marginRight="17dp"
+                android:textColor="@color/color_AAAAAA"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:layout_width="9dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/setting_next_img" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlNightMode"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/rlClearCache"
+            android:background="@drawable/item_bg"
+            android:paddingLeft="15dp"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/niight_mode"
+                android:textColor="@color/color_323232"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/rlNightModeImg1"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/night_mode_new"
+                    android:visibility="gone">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/rlNightModeImg2"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/no_night_mode"
+                    android:visibility="visible"></ImageView>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bg04"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rlNightMode"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="19dp"
+            android:background="@color/color_EFEFEF" />
+
+        <RelativeLayout
+            android:id="@+id/language_switching"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/bg04"
+            android:background="@drawable/item_bg"
+            android:paddingLeft="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="14dp"
+                android:text="@string/language_switching"
+                android:textColor="@color/color_323232"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivLanguageJT"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/jieti_icon"
+                    android:visibility="visible">
+
+                </ImageView>
+
+                <ImageView
+                    android:id="@+id/ivLanguageFT"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/fanti_icon"
+                    android:visibility="gone">
+
+                </ImageView>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlVersionInformation"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/language_switching"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/item_bg"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="14dp"
+                android:text="@string/version_information"
+                android:textColor="@color/color_323232"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="10dp">
+
+                    <TextView
+                        android:id="@+id/tvVersionNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:paddingRight="2dp"
+                        android:textSize="13sp" />
+
+                    <TextView
+                        android:id="@+id/tvVersionSign"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="right"
+                        android:gravity="top"
+                        android:text="•"
+                        android:textColor="@color/red_normal"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+                </FrameLayout>
+
+                <ImageView
+                    android:layout_width="9dp"
+                    android:layout_height="15dp"
+                    android:src="@drawable/setting_next_img" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/bg03"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/rlVersionInformation"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="19dp"
+            android:background="@color/color_EFEFEF" />
+
+        <RelativeLayout
+            android:id="@+id/rlFeedback"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/bg03"
+            android:background="@drawable/item_bg"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/feedback"
+                android:textColor="@color/color_323232"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="9dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/setting_next_img" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlOutLogin"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/item_bg"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/log_out"
+                android:textColor="@color/color_EA3D36"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

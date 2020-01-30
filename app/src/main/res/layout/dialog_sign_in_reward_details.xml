@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="75dp"
+        android:layout_marginRight="75dp"
+        android:background="@drawable/shape_ffffff_10_bg"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tvSignInRewardDetailsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginBottom="12.3dp"
+            android:text="@string/reward_details"
+            android:textStyle="bold"
+            android:textColor="@color/color_666666"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/llSignInRewardDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSignInRewardDetailsTitle"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvSignInRewardDetailsCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="7.6dp"
+                android:text="签到xxx天的奖励为"
+                android:textColor="@color/color_666666"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivSignInRewardDetails"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_below="@id/llSignInRewardDetails"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/qing_dao_jian_li_img" />
+        <TextView
+            android:id="@+id/tvSignInRewardDetailsMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_below="@id/ivSignInRewardDetails"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_666666"
+            android:layout_marginBottom="13dp"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/tvSignInRewardDetailsClose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvSignInRewardDetailsMessage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15.6dp"
+            android:text="@string/close"
+            android:textColor="@color/color_0EB4FE"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</LinearLayout>

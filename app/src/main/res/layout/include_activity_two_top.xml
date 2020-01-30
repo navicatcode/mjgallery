@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="66dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true">
+
+        <ImageView
+            android:id="@+id/ivTopReturn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/activity_return_img" />
+
+        <LinearLayout
+            android:id="@+id/rlTop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvTopTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="marquee"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textColor="@color/color_0EB4FE"
+                android:textSize="18sp">
+                <requestFocus />
+            </TextView>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlActivityNperStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="260dp"
+            android:layout_centerVertical="true">
+
+            <TextView
+                android:id="@+id/tvActivityNperStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="34dp"
+                android:text="@string/confirm"
+                android:textColor="@color/color_0AAFFA"
+                android:textSize="15sp" />
+
+            <com.mjgallery.mjgallery.widget.UIImageView
+                android:id="@+id/ivActivityNper"
+                android:layout_width="13dp"
+                android:layout_height="8dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="17dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/picture_details_next" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

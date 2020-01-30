@@ -1,0 +1,528 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/llMineTop"
+                    android:layout_width="match_parent"
+                    android:layout_height="247dp"
+                    android:background="@drawable/mine_top_bg_img"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="35dp"
+                        android:paddingRight="13dp">
+
+                        <com.mjgallery.mjgallery.widget.UIImageView
+                            android:id="@+id/ivMineSetting"
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/mine_setting" />
+
+                        <com.mjgallery.mjgallery.widget.UIImageView
+                            android:id="@+id/ivMineNotice"
+                            android:layout_width="18dp"
+                            android:layout_height="19dp"
+                            android:visibility="gone"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="11dp"
+                            android:layout_toLeftOf="@id/ivMineSetting"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/mine_message_one_img" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="85dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="18dp"
+                            android:layout_marginRight="16.5dp"
+                            >
+
+                            <RelativeLayout
+                                android:layout_width="75dp"
+                                android:layout_height="75dp"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/mine_user_img_shape">
+
+                                <ImageView
+                                    android:id="@+id/ivMineUserImg"
+                                    android:layout_width="69dp"
+                                    android:layout_height="69dp"
+                                    android:layout_centerInParent="true"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/mine_user_normal_img" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.3">
+
+                            <TextView
+                                android:id="@+id/tvMineUserName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:minWidth="60dp"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+                            <TextView
+                                android:id="@+id/tvMineInviteCode"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tvMineUserName"
+                                android:layout_marginTop="11dp"
+                                android:text="@string/app_mine_invite_code"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tvMineInviteCodeNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tvMineUserName"
+                                android:layout_marginTop="11dp"
+                                android:layout_toRightOf="@id/tvMineInviteCode"
+
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <LinearLayout
+                                android:id="@+id/llVipLevel"
+                                android:layout_width="46dp"
+                                android:layout_height="20dp"
+                                android:layout_marginTop="2.5dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@id/tvMineUserName"
+                                android:gravity="center_vertical"
+                                android:visibility="invisible"
+                                android:background="@drawable/mine_vip_level"
+                                android:orientation="horizontal"
+                                >
+                                <TextView
+                                    android:id="@+id/tvVipLevelNumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:textSize="10sp"
+                                    android:textStyle="bold"
+                                    android:textColor="@color/white"
+                                    />
+                                <TextView
+                                    android:id="@+id/tvVipLevelTxt"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4.5dp"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/color_1DCCE4"
+                                    />
+                            </LinearLayout>
+                            <LinearLayout
+                                android:id="@+id/rlCopyCode"
+                                android:layout_width="39dp"
+                                android:layout_height="17dp"
+                                android:layout_marginTop="11dp"
+                                android:layout_marginLeft="7dp"
+                                android:layout_below="@id/llVipLevel"
+                                android:layout_toRightOf="@id/tvMineInviteCodeNumber"
+                                android:gravity="center_vertical"
+                                android:background="@drawable/btn_ffffff_9_bg_xiaogou"
+                                android:orientation="horizontal"
+                                >
+
+                                <ImageView
+                                    android:id="@+id/ivCopyCode"
+                                    android:layout_width="12dp"
+                                    android:layout_height="12dp"
+                                    android:scaleType="fitXY"
+                                    android:layout_marginLeft="2dp"
+                                    android:src="@drawable/mine_cody_code" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/mine_my_cody"
+                                    android:textSize="10sp"
+                                    android:textColor="@color/color_0AAFFA"
+                                    />
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:id="@+id/tvMineBindingMobilePhone"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tvMineInviteCode"
+                                android:layout_marginTop="11dp"
+                                android:text="@string/app_mine_binding_mobile_phone"
+                                android:textColor="@color/white"
+                                android:textSize="12sp" />
+
+                            <TextView
+                                android:id="@+id/tvMineBindingMobilePhoneNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tvMineInviteCode"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginTop="11dp"
+                                android:layout_toRightOf="@id/tvMineBindingMobilePhone"
+                                android:text="@string/app_mine_unbinding"
+                                android:textColor="@color/color_FF5C5C"
+                                android:textSize="12sp" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llSignInReward"
+                            android:layout_width="50dp"
+                            android:layout_height="42dp"
+                            android:orientation="vertical"
+                            android:clickable="true"
+                            android:gravity="bottom"
+                            android:layout_marginTop="1dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/mine_qiandao"
+                            >
+                            <TextView
+                                android:id="@+id/tvSignInReward"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/mine_my_qiedao"
+                                android:layout_marginLeft="3dp"
+                                android:layout_gravity="center_horizontal"
+                                android:textColor="@color/white"
+                                android:textSize="14dp"
+                                android:layout_marginBottom="3dp"
+                                />
+
+                            <TextView
+                                android:id="@+id/btnPerfectInformation"
+                                android:layout_width="70dp"
+                                android:layout_height="21dp"
+                                android:background="@drawable/item_bg_yuanjiao_10"
+                                android:gravity="center"
+                                android:visibility="gone"
+                                android:text="@string/perfect_information"
+                                android:textColor="@color/color_33E3DD"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvTotalCommission"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="--"
+                                android:textColor="@color/white"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/app_mine_total_commission"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@color/white"
+                            android:gravity="center_vertical" />
+                        <LinearLayout
+                            android:id="@+id/rlSumRegister"
+                            android:layout_width="0dp"
+                            android:gravity="center"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tvTotalNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="--"
+                                android:textColor="@color/white"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/app_mine_total_number"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="1dp"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="4dp"
+                            android:background="@color/white"
+                            android:gravity="center_vertical" />
+
+                        <LinearLayout
+                            android:id="@+id/rlTodayRegister"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tvSalesToday"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="--"
+                                android:textColor="@color/white"
+                                android:textSize="17sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:text="@string/app_mine_sales_today"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginTop="-40dp"
+                    android:layout_marginRight="13dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="5dp"
+                    android:visibility="gone"
+                    app:cardMaxElevation="2dp"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rlWithdraw"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="21dp"
+                                android:layout_centerVertical="true">
+
+                                <ImageView
+                                    android:id="@+id/ivBalanceImg"
+                                    android:layout_width="20dp"
+                                    android:layout_height="21dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="17dp"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/mine_yuer_img" />
+
+                                <TextView
+                                    android:id="@+id/tvBalance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toRightOf="@id/ivBalanceImg"
+                                    android:text="@string/app_mine_balance"
+                                    android:textColor="@color/color_666666"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tvBalanceNumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toRightOf="@id/tvBalance"
+                                    android:text="¥--"
+                                    android:textColor="@color/color_FCAC45"
+                                    android:textSize="15sp" />
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rlMineWithdrawal"
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_marginRight="4dp"
+                                android:background="@drawable/mine_withdrawal_shape">
+
+                                <TextView
+                                    android:id="@+id/tvMineWithdrawal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginLeft="6dp"
+                                    android:layout_marginRight="6dp"
+                                    android:text="@string/app_mine_withdrawal"
+                                    android:textColor="@color/color_F83E3E"
+                                    android:textSize="10sp" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="1px"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="7dp"
+                            android:layout_marginBottom="7dp"
+                            android:background="@color/color_EEEEEE" />
+
+                        <RelativeLayout
+                            android:id="@+id/rlMineInstructions"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="21dp"
+                                android:layout_centerVertical="true">
+
+
+                                <ImageView
+                                    android:id="@+id/ivInstructionsImg"
+                                    android:layout_width="20dp"
+                                    android:layout_height="21dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="17dp"
+                                    android:scaleType="fitXY"
+                                    android:src="@drawable/mine_jifen_img" />
+
+                                <TextView
+                                    android:id="@+id/tvInstructions"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_toRightOf="@id/ivInstructionsImg"
+                                    android:text="@string/app_mine_payment"
+                                    android:textColor="@color/color_666666"
+                                    android:textSize="12sp" />
+
+                                <TextView
+                                    android:id="@+id/tvInstructionsNumber"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_toRightOf="@id/tvInstructions"
+                                    android:text="@string/app_mine_statement"
+                                    android:textColor="@color/color_FC6C45"
+                                    android:textSize="15sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="15dp"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginTop="4dp"
+                                android:layout_marginRight="10dp"
+                                android:background="@drawable/mine_instructions_shape">
+
+                                <TextView
+                                    android:id="@+id/tvMineInstructions"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginLeft="6dp"
+                                    android:layout_marginRight="6dp"
+                                    android:text="@string/app_mine_instructions"
+                                    android:textColor="@color/color_808080"
+                                    android:textSize="10sp" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewGrid"
+                    android:layout_width="match_parent"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:layout_height="wrap_content"
+                    >
+
+                </androidx.recyclerview.widget.RecyclerView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="50dp" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>
+

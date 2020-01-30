@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include layout="@layout/include_activity_top" />
+
+    <ImageView
+        android:id="@+id/ivMaJinToKuImg"
+        android:layout_width="212dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="90dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/a_bout_bg_img" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_marginTop="80dp"
+        android:layout_height="wrap_content" />
+
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:layout_marginTop="80dp"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:paddingLeft="15dp"-->
+    <!--        android:paddingRight="15dp">-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:text="QQ"-->
+    <!--            android:textColor="@color/color_4D4D4D"-->
+    <!--            android:textSize="15sp" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_alignParentRight="true"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:text="909067067"-->
+    <!--            android:textColor="@color/color_4D4D4D"-->
+    <!--            android:textSize="15sp" />-->
+    <!--    </RelativeLayout>-->
+
+    <!--    <TextView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:layout_marginLeft="15dp"-->
+    <!--        android:layout_marginRight="15dp"-->
+    <!--        android:background="@color/color_CCCCCC" />-->
+
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:paddingLeft="15dp"-->
+    <!--        android:paddingRight="15dp">-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:text="@string/working_days"-->
+    <!--            android:textColor="@color/color_4D4D4D"-->
+    <!--            android:textSize="15sp" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_alignParentRight="true"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:text="@string/hours_day"-->
+    <!--            android:textColor="@color/color_4D4D4D"-->
+    <!--            android:textSize="15sp" />-->
+    <!--    </RelativeLayout>-->
+
+    <!--    <TextView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:layout_marginLeft="15dp"-->
+    <!--        android:layout_marginRight="15dp"-->
+    <!--        android:background="@color/color_CCCCCC" />-->
+
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:paddingLeft="15dp"-->
+    <!--        android:paddingRight="15dp">-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:text="@string/official_website"-->
+    <!--            android:textColor="@color/color_4D4D4D"-->
+    <!--            android:textSize="15sp" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_alignParentRight="true"-->
+    <!--            android:layout_centerVertical="true"-->
+    <!--            android:text="www.xgmj.com"-->
+    <!--            android:textColor="@color/color_4D4D4D"-->
+    <!--            android:textSize="15sp" />-->
+    <!--    </RelativeLayout>-->
+
+    <!--    <TextView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:layout_marginLeft="15dp"-->
+    <!--        android:layout_marginRight="15dp"-->
+    <!--        android:background="@color/color_CCCCCC" />-->
+</LinearLayout>

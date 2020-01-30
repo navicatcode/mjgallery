@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    android:paddingBottom="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/ivMyCommentsUserImg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:id="@+id/tvMyCommentsUserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="14dp"
+            android:layout_marginLeft="9dp"
+            android:layout_toRightOf="@id/ivMyCommentsUserImg"
+            android:textColor="@color/color_2E2D2D"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tvMyCommentsUserTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="9dp"
+            android:layout_toRightOf="@id/ivMyCommentsUserImg"
+            android:textColor="@color/color_B4B4B4"
+            android:textSize="11sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llMyCommentsContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="71dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="5dp"
+        android:background="@drawable/item_bg"
+        >
+    <TextView
+        android:id="@+id/tvMyCommentsMiaoshu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/color_2E2D2D"
+        android:textSize="14sp" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+            <ImageView
+                android:id="@+id/ivMyCommentsImg"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="6dp"
+                android:scaleType="fitXY" />
+            <TextView
+                android:id="@+id/ivMyCommentsTitle"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_0EB4FE"
+                android:layout_gravity="bottom|right"
+                android:gravity="right"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="5dp"
+                android:textSize="10sp"
+                />
+        </FrameLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/shape_f5f5f5_8_bg"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvMyCommentsContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/color_2E2D2D"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>

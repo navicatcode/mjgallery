@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llMyVIPItemBg"
+    android:layout_width="match_parent"
+    android:layout_height="39dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tvVIPItem01"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp" />
+    <TextView
+        android:layout_width="1dp"
+        android:background="@color/color_CACACA"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/tvVIPItem02"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp" />
+    <TextView
+        android:layout_width="1dp"
+        android:background="@color/color_CACACA"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/tvVIPItem03"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp" />
+    <TextView
+        android:layout_width="1dp"
+        android:background="@color/color_CACACA"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/tvVIPItem04"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:ellipsize="end"
+        android:paddingLeft="2dp"
+        android:paddingRight="2dp"
+        android:singleLine="true"
+        android:gravity="center"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp" />
+    <TextView
+        android:layout_width="1dp"
+        android:background="@color/color_CACACA"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/tvVIPItem05"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:textColor="@color/color_666666"
+        android:textSize="12sp" />
+</LinearLayout>

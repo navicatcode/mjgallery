@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="225dp"
+        android:layout_height="229dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="86dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/mine_notice_item_error_img" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/notice_error_bg"
+        android:textColor="@color/color_A2A2A2"
+        android:textSize="15sp" />
+</LinearLayout>

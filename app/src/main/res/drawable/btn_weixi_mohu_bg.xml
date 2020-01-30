@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/weixi_mohu" android:state_enabled="true" />
+    <!--触摸状态时颜色-->
+    <item android:drawable="@drawable/icon_wechat" android:state_enabled="false" />
+</selector>

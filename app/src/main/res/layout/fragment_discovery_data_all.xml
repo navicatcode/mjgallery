@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/rlRecyclerViewDataList"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecyclerViewDataList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="13dp"
+            android:paddingTop="10dp" />
+        <!--下面的自定义属性都是默认的,可以不写-->
+        <com.mjgallery.mjgallery.quicksidebar.QuickSideBarTipsView
+            android:id="@+id/quickSideBarTipsView"
+            android:layout_width="@dimen/height_quicksidebartips"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/quickSideBarView"
+            android:paddingTop="10dp"
+            app:sidebarBackgroundColor="@color/colorPrimary"
+            app:sidebarTextColor="@android:color/white"
+            app:sidebarTextSize="12sp" />
+        <!-- 这个是字母栏的提示 -->
+        <!--下面的自定义属性都是默认的,可以不写-->
+        <com.mjgallery.mjgallery.quicksidebar.QuickSideBarView
+            android:id="@id/quickSideBarView"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="45dp"
+            android:paddingLeft="5dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:sidebarItemHeight="@dimen/height_quicksidebaritem"
+            app:sidebarTextColor="@color/color_8B8B8B"
+            app:sidebarTextColorChoose="@color/color_08ADF8"
+            app:sidebarTextSize="12sp"
+            app:sidebarTextSizeChoose="15sp" />
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mRecyclerViewDataGrid"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:paddingLeft="15dp"
+      />
+</RelativeLayout>

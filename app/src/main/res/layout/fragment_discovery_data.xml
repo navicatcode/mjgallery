@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="34dp"
+        android:layout_marginBottom="7dp"
+        android:orientation="horizontal"
+        android:paddingLeft="7dp">
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/mSlidingTabLayout"
+            android:layout_width="0dp"
+            android:layout_height="22dp"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="461"
+            android:paddingBottom="2dp"
+            app:tl_indicator_color="@color/color_0AAFFA"
+            app:tl_indicator_width_equal_title="true"
+            app:tl_tab_space_equal="true"
+            app:tl_textSelectColor="@color/color_0AAFFA"
+            app:tl_textUnselectColor="@color/color_999999"
+            app:tl_textsize="15sp"
+            tl:tl_divider_color="#0AAFFA"
+            tl:tl_divider_width="1dp"
+            tl:tl_indicator_anim_enable="true"
+            tl:tl_indicator_bounce_enable="true"
+            tl:tl_indicator_height="1dp"
+            tl:tl_indicator_width_equal_title="true"
+            tl:tl_tab_space_equal="true"
+            tl:tl_underline_color="#0AAFFA"
+            tl:tl_underline_height="1dp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="289">
+
+            <RelativeLayout
+                android:id="@+id/rlDataGridImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="41dp"
+                android:padding="9dp">
+
+                <com.mjgallery.mjgallery.widget.UIImageView
+                    android:id="@+id/ivDataGridImg"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/data_grid_img_bg" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rlDataListImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@id/rlDataGridImg"
+                android:padding="9dp">
+
+                <com.mjgallery.mjgallery.widget.UIImageView
+                    android:id="@+id/ivDataListImg"
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/data_list_img_bg" />/>
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:background="@color/color_ECECEC" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="10dp" />
+</LinearLayout>

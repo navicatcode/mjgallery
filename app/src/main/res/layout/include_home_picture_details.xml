@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mjgallery.mjgallery.awildfire.InputAwareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mInputAwareLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="-30dp"
+            android:fitsSystemWindows="true"
+            android:orientation="vertical">
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/mSmartRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.core.widget.NestedScrollView
+                    android:id="@+id/mNestedScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="59dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:descendantFocusability="blocksDescendants"
+                        android:orientation="vertical">
+
+                        <com.lihang.ShadowLayout
+                            android:id="@+id/mShadowLayoutTop"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:hl_cornerRadius="9dp"
+                            app:hl_dx="3dp"
+                            app:hl_dy="3dp"
+                            app:hl_shadowBackColor="@color/white"
+                            app:hl_shadowColor="@color/color_fcececec"
+                            app:hl_shadowLimit="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <TextView
+                                        android:id="@+id/tvDay"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="12dp"
+                                        android:textColor="@color/color_8F8F8F"
+                                        android:textSize="13sp" />
+
+                                    <TextView
+                                        android:id="@+id/tvQishu"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginRight="12dp"
+                                        android:textColor="@color/color_8F8F8F"
+                                        android:textSize="13sp" />
+                                </RelativeLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="42dp"
+                                    android:layout_marginLeft="6dp"
+                                    android:layout_marginRight="6dp"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <FrameLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1">
+
+                                        <ImageView
+                                            android:id="@+id/ivHomeLottery01"
+                                            android:layout_width="42dp"
+                                            android:layout_height="42dp"
+                                            android:layout_gravity="center"
+                                            android:scaleType="fitXY"
+                                            android:src="@drawable/home_sheng_xiao_bg1_img" />
+
+                                        <TextView
+                                            android:id="@+id/tvHomeLottery01"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginRight="4dp"
+                                            android:text="@string/is"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+                                    </FrameLayout>
+
+                                    <FrameLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1">
+
+                                        <ImageView
+                                            android:id="@+id/ivHomeLottery02"
+                                            android:layout_width="42dp"
+                                            android:layout_height="42dp"
+                                            android:layout_gravity="center"
+                                            android:scaleType="fitXY"
+                                            android:src="@drawable/home_sheng_xiao_bg1_img" />
+
+                                        <TextView
+                                            android:id="@+id/tvHomeLottery02"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginRight="4dp"
+                                            android:text="@string/in"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+                                    </FrameLayout>
+
+
+                                    <FrameLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1">
+
+                                        <ImageView
+                                            android:id="@+id/ivHomeLottery03"
+                                            android:layout_width="42dp"
+                                            android:layout_height="42dp"
+                                            android:layout_gravity="center"
+                                            android:scaleType="fitXY"
+
+                                            android:src="@drawable/home_sheng_xiao_bg3_img" />
+
+                                        <TextView
+                                            android:id="@+id/tvHomeLottery03"
+                                            android:layout_width="42dp"
+                                            android:layout_height="42dp"
+                                            android:layout_gravity="center"
+                                            android:layout_marginRight="4dp"
+                                            android:gravity="center"
+                                            android:text="@string/open"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+                                    </FrameLayout>
+
+                                    <FrameLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1">
+
+                                        <ImageView
+                                            android:id="@+id/ivHomeLottery04"
+                                            android:layout_width="42dp"
+                                            android:layout_height="42dp"
+                                            android:layout_gravity="center"
+                                            android:scaleType="fitXY"
+                                            android:src="@drawable/home_sheng_xiao_bg2_img" />
+
+                                        <TextView
+                                            android:id="@+id/tvHomeLottery04"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginRight="4dp"
+                                            android:text="@string/prize"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+                                    </FrameLayout>
+
+
+                                    <FrameLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1">
+
+                                        <ImageView
+                                            android:id="@+id/ivHomeLottery05"
+                                            android:layout_width="42dp"
+                                            android:layout_height="42dp"
+                                            android:layout_gravity="center"
+                                            android:scaleType="fitXY"
+                                            android:src="@drawable/home_sheng_xiao_bg1_img" />
+
+                                        <TextView
+                                            android:id="@+id/tvHomeLottery05"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginRight="4dp"
+                                            android:text="@string/please"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+                                    </FrameLayout>
+
+                                    <FrameLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1">
+
+                                        <ImageView
+                                            android:id="@+id/ivHomeLottery06"
+                                            android:layout_width="42dp"
+                                            android:layout_height="42dp"
+                                            android:layout_gravity="center"
+                                            android:scaleType="fitXY"
+                                            android:src="@drawable/home_sheng_xiao_bg1_img" />
+
+                                        <TextView
+                                            android:id="@+id/tvHomeLottery06"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginRight="4dp"
+                                            android:text="@string/a_little"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+                                    </FrameLayout>
+
+
+                                    <FrameLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1">
+
+                                        <ImageView
+                                            android:layout_width="13dp"
+                                            android:layout_height="13dp"
+                                            android:layout_gravity="center"
+                                            android:scaleType="fitXY"
+                                            android:src="@drawable/add_home_img" />
+                                    </FrameLayout>
+
+
+                                    <FrameLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_gravity="center"
+                                        android:layout_weight="1">
+
+                                        <ImageView
+                                            android:id="@+id/ivHomeLottery07"
+                                            android:layout_width="42dp"
+                                            android:layout_height="42dp"
+                                            android:layout_gravity="center"
+                                            android:scaleType="fitXY"
+                                            android:src="@drawable/home_sheng_xiao_bg1_img" />
+
+                                        <TextView
+                                            android:id="@+id/tvHomeLottery07"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginRight="4dp"
+                                            android:text="@string/after"
+                                            android:textColor="@color/black"
+                                            android:textSize="15sp"
+                                            android:textStyle="bold" />
+                                    </FrameLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="6dp"
+                                    android:layout_marginRight="6dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:id="@+id/tvLotteryName01"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:text="羊/兔"
+                                            android:textColor="@color/color_7E7E7E"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:id="@+id/tvLotteryName02"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:text="羊/兔"
+                                            android:textColor="@color/color_7E7E7E"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:id="@+id/tvLotteryName03"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:text="羊/兔"
+                                            android:textColor="@color/color_7E7E7E"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:id="@+id/tvLotteryName04"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:text="羊/兔"
+                                            android:textColor="@color/color_7E7E7E"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:id="@+id/tvLotteryName05"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:text="羊/兔"
+                                            android:textColor="@color/color_7E7E7E"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:id="@+id/tvLotteryName06"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:text="羊/兔"
+                                            android:textColor="@color/color_7E7E7E"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_weight="1">
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginRight="5dp"
+                                        android:layout_weight="1">
+
+                                        <TextView
+                                            android:id="@+id/tvLotteryName07"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:text="羊/兔"
+                                            android:textColor="@color/color_7E7E7E"
+                                            android:textSize="14sp"
+                                            android:textStyle="bold" />
+                                    </RelativeLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/llPictureDetailsNper"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:clickable="true"
+                                    android:focusable="true"
+                                    android:gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tvPictureDetailsNper"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="center_horizontal"
+                                        android:clickable="true"
+                                        android:focusable="true"
+                                        android:gravity="center_horizontal"
+                                        android:text="2019年108期 "
+                                        android:textColor="@color/text_color_selectorr"
+                                        android:textSize="17sp" />
+
+                                    <com.mjgallery.mjgallery.widget.UIImageView
+                                        android:id="@+id/ivPictureDetailsNper"
+                                        android:layout_width="13dp"
+                                        android:layout_height="8dp"
+                                        android:layout_gravity="center"
+                                        android:layout_marginLeft="4dp"
+                                        android:clickable="true"
+                                        android:focusable="true"
+                                        android:src="@drawable/picture_details_next" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+                        </com.lihang.ShadowLayout>
+
+                        <com.lihang.ShadowLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="-17dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            app:hl_cornerRadius="10dp"
+                            app:hl_dx="3dp"
+                            app:hl_dy="3dp"
+                            app:hl_shadowBackColor="@color/white"
+                            app:hl_shadowColor="@color/color_fcececec"
+                            app:hl_shadowLimit="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <RelativeLayout
+                                    android:id="@+id/rlPictureDetailsTop"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="48dp"
+                                    android:paddingLeft="7dp">
+
+                                    <TextView
+                                        android:id="@+id/tvPetElvesDetailsTitle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:text="宠物精灵"
+                                        android:textColor="@color/color_141414"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/tvPetElvesDetailsFocusOn"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="23dp"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="7dp"
+                                        android:background="@drawable/item_oaaffa_bg"
+                                        android:gravity="center"
+                                        android:paddingLeft="10dp"
+                                        android:paddingRight="10dp"
+                                        android:text="@string/focus_on_one"
+                                        android:textColor="@color/white"
+                                        android:textSize="12sp" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/tvPictureDetailsTop"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/color_E5E5E5" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <ImageView
+                                        android:id="@+id/ivHomePictureDetailsImg"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="6dp"
+                                        android:layout_marginTop="10dp"
+                                        android:layout_marginRight="6dp"
+                                        android:scaleType="fitXY" />
+
+                                    <com.mjgallery.mjgallery.widget.UIImageView
+                                        android:id="@+id/mPictureDetailsImgDownload"
+                                        android:layout_width="37dp"
+                                        android:layout_height="37dp"
+                                        android:layout_below="@id/ivHomePictureDetailsImg"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginTop="-44dp"
+                                        android:layout_marginRight="15dp"
+                                        android:src="@drawable/xia_zai" />
+                                </RelativeLayout>
+
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="18dp"
+                                    android:gravity="center_vertical"
+                                    android:layout_marginTop="12dp"
+                                    android:layout_marginBottom="22dp"
+                                    android:paddingLeft="6dp">
+
+                                    <LinearLayout
+                                        android:id="@+id/ivPetElvesDetailsShare"
+                                        android:layout_width="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:layout_width="18dp"
+                                            android:layout_height="12dp"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginLeft="5dp"
+                                            android:src="@drawable/item_yangjing_img" />
+
+                                    <TextView
+                                        android:id="@+id/tvPetElvesDetailsViews"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="5dp"
+                                        android:textColor="@color/color_999999"
+                                        android:textSize="12sp" />
+                                    </LinearLayout>
+                                    <com.mjgallery.mjgallery.widget.UIImageView
+                                        android:id="@+id/ivPetElvesDetailsGiveLike"
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:layout_marginLeft="123dp"
+                                        android:src="@drawable/pet_elves_details_give_lick_img" />
+
+                                    <TextView
+                                        android:id="@+id/tvPetElvesDetailsGiveLike"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_toRightOf="@id/ivPetElvesDetailsGiveLike"
+                                        android:text="0"
+                                        android:textColor="@color/color_999999"
+                                        android:textSize="12sp" />
+
+                                    <com.mjgallery.mjgallery.widget.UIImageView
+                                        android:id="@+id/ivPetElvesDetailsCollection"
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:layout_marginLeft="216dp"
+                                        android:src="@drawable/pet_elves_details_collection_img" />
+
+                                    <TextView
+                                        android:id="@+id/tvPetElvesDetailsCollection"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_toRightOf="@id/ivPetElvesDetailsCollection"
+                                        android:text="0"
+                                        android:textColor="@color/color_999999"
+                                        android:textSize="12sp" />
+
+                                    <com.mjgallery.mjgallery.widget.UIImageView
+                                        android:id="@+id/ivPetElvesDetailsComments"
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:layout_marginLeft="297dp"
+                                        android:src="@drawable/pet_elves_details_comments_img" />
+
+                                    <TextView
+                                        android:id="@+id/tvPetElvesDetailsComments"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="5dp"
+                                        android:layout_toRightOf="@id/ivPetElvesDetailsComments"
+                                        android:text="0"
+                                        android:textColor="@color/color_999999"
+                                        android:textSize="12sp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                        </com.lihang.ShadowLayout>
+
+                        <com.youth.banner.Banner
+                            android:id="@+id/banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="110dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="-5dp"
+                            android:layout_marginRight="10dp" />
+                        <TextView
+                            android:id="@+id/idAllComments"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="22dp"
+                            android:layout_marginTop="12dp"
+                            android:text="全部评论（8）"
+                            android:textColor="@color/color_999999"
+                            android:textSize="15sp" />
+
+                        <com.lihang.ShadowLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="10dp"
+                            app:hl_cornerRadius="10dp"
+                            app:hl_dx="3dp"
+                            app:hl_dy="3dp"
+                            app:hl_shadowBackColor="@color/white"
+                            app:hl_shadowColor="@color/color_fcececec"
+                            app:hl_shadowLimit="10dp">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/mRecyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="12dp"
+                                android:paddingBottom="12dp" />
+                        </com.lihang.ShadowLayout>
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+            <com.mjgallery.mjgallery.awildfire.ConversationInputPanel
+                android:id="@+id/inputPanelFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" />
+        </RelativeLayout>
+
+        <com.luck.picture.lib.photoview.PhotoView
+            android:id="@+id/mPhotoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorBlack"
+            android:scaleType="fitCenter"
+            android:visibility="gone" />
+    </FrameLayout>
+</com.mjgallery.mjgallery.awildfire.InputAwareLayout>

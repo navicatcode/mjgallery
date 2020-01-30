@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mjgallery.mjgallery.awildfire.InputAwareLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llCommentList"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:visibility="gone">
+
+    <LinearLayout
+        android:id="@+id/llCommentListOne"
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:background="@color/color_00000000"
+        android:orientation="horizontal" />
+
+    <RelativeLayout
+        android:id="@+id/rlCommentList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:background="@drawable/discovery_details_comments_dialog_bg"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llDiscoveryDetailsCommentsTitle"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:orientation="horizontal"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/total_top_dialog"
+                        android:textColor="@color/color_2E2E2E"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/tvDiscoveryDetailsCommentsTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="0"
+                        android:textColor="@color/color_2E2E2E"
+                        android:textSize="16sp" />
+
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="6dp"
+                        android:text="@string/total_top_dialog_one"
+                        android:textColor="@color/color_2E2E2E"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical|right"
+                    android:layout_weight="0.5"
+                    android:gravity="center_vertical|right"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:id="@+id/rlDialogClose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:padding="15dp">
+
+                        <com.mjgallery.mjgallery.widget.UIImageView
+                            android:id="@+id/ivDialogClose"
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/dialog_close" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/color_DFDFDF" />
+
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/mSmartRefreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/mRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="68dp" />
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        </LinearLayout>
+
+        <com.mjgallery.mjgallery.awildfire.ConversationInputPanel
+            android:id="@+id/inputPanelFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/dialog_et_bg"
+            android:orientation="horizontal"
+            android:paddingTop="11dp"
+            android:paddingBottom="11dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="567"
+                android:background="@drawable/dialog_et_shape"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/etDiscoveryDetailsCommentsDialog"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginRight="40dp"
+                    android:background="@null"
+                    android:hint="@string/et_commments_title"
+                    android:paddingLeft="11dp"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/color_80ffffff"
+                    android:textCursorDrawable="@color/white"
+                    android:textSize="15sp" />
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="7dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/item_biao_qing" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="183"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+
+                <RelativeLayout
+                    android:id="@+id/rlDiscoveryDetailsDialogComments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/btn_34c8f5_17_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:paddingLeft="14dp"
+                    android:paddingRight="14dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/send"
+                        android:textColor="@color/white" />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</com.mjgallery.mjgallery.awildfire.InputAwareLayout>

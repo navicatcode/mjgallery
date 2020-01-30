@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".mvp.ui.activity.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <FrameLayout
+        android:id="@+id/fl_mask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_half_trans"
+        android:clickable="false"
+        android:visibility="gone" />
+    <!--
+       android:layout_marginBottom="48dp"
+    -->
+
+    <RelativeLayout
+        android:id="@+id/rl_collection"
+        android:layout_width="70dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:clickable="true"
+        android:paddingTop="2dp"
+        android:onClick="onClick">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/item_collection_img" />
+
+        <TextView
+            android:id="@+id/tv_collection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/my_comments"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_phone_album"
+        android:layout_width="70dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:clickable="true"
+        android:paddingTop="2dp"
+        android:onClick="onClick">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/item_photo_album_img" />
+
+        <TextView
+            android:id="@+id/tv_phone_album"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/photo_albums"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_camera"
+        android:layout_width="70dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:clickable="true"
+        android:paddingTop="2dp"
+        android:onClick="onClick">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/item_camera_img" />
+
+        <TextView
+            android:id="@+id/tv_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/photo_upload"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_found"
+        android:layout_width="70dp"
+        android:layout_height="65dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:clickable="true"
+        android:paddingTop="2dp"
+        android:onClick="onClick">
+
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/item_found_img" />
+
+        <TextView
+            android:id="@+id/tv_found"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/i_found"
+            android:textColor="@android:color/white" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv1"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="18dp"
+        android:onClick="onClick"
+        android:scaleType="fitXY" />
+
+    <ImageView
+        android:id="@+id/iv_publish"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/icon_expand"
+        android:scaleType="fitXY" />
+
+</FrameLayout>

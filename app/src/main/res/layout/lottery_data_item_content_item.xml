@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="38dp"
+    android:layout_height="42dp"
+    android:layout_marginLeft="9dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="38dp"
+        android:layout_height="42dp"
+        android:src="@drawable/qiu_bg" />
+
+    <TextView
+        android:id="@+id/tvQiuTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/black"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+</RelativeLayout>

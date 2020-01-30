@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:layout_gravity="center"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginBottom="6dp"
+    android:background="@drawable/share_item_adadad_4"
+    android:clickable="true"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp">
+
+    <TextView
+        android:id="@+id/tvDiscoveryDataListTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:maxLength="10"
+        android:textColor="@color/color_999999"
+        android:textSize="15sp" />
+
+
+    <ImageView
+        android:id="@+id/ivDiscoveryDataListOne"
+        android:layout_width="16dp"
+        android:layout_height="19dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="103dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/latest_img" />
+
+    <ImageView
+        android:id="@+id/ivDiscoveryDataListTwo"
+        android:layout_width="16dp"
+        android:layout_height="19dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="135dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/hottest_img" />
+
+    <ImageView
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/item_oval_adadad" />
+
+    <ImageView
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="12dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/item_oval_adadad" />
+
+    <ImageView
+        android:layout_width="5dp"
+        android:layout_height="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="24dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/item_oval_adadad" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="35dp"
+        android:text="@string/discovery_details_data_list_all_item_title"
+        android:textColor="@color/color_0AAFFA"
+        android:textSize="12sp" />
+</RelativeLayout>

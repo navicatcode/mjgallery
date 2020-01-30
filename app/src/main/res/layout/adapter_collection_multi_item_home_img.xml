@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/color_ECECEC" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="4dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="9dp">
+
+        <TextView
+            android:id="@+id/tvCollectionMultiItemHomeImgTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_666666"
+            android:textSize="14sp" />
+
+        <com.mjgallery.mjgallery.widget.UIImageView
+            android:id="@+id/ivCollectionMultiItemHomeImgDelete"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/collection_multi_item_delete" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/ivCollectionMultiItemHomeImg"
+        android:layout_width="match_parent"
+        android:layout_height="202dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:background="@color/color_ECECEC"
+        android:padding="7dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/icon_loading" />
+
+    <TextView
+        android:id="@+id/tvCollectionMultiItemHomeTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="13dp"
+        android:textColor="@color/color_999999"
+        android:textSize="10sp" />
+</LinearLayout>

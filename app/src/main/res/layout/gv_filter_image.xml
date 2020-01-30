@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <cn.gavinliu.android.lib.shapedimageview.ShapedImageView
+            android:id="@+id/imgOne"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_alignParentLeft="true"
+            android:scaleType="fitXY"
+            android:src="@color/color_f6"
+            android:visibility="gone"
+            app:round_radius="5dp"
+            app:shape_mode="round_rect" />
+
+        <cn.gavinliu.android.lib.shapedimageview.ShapedImageView
+            android:id="@+id/imgTwo"
+            android:layout_width="105dp"
+            android:layout_height="105dp"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY"
+            android:src="@color/color_f6"
+            android:visibility="gone"
+            app:round_radius="5dp"
+            app:shape_mode="round_rect" />
+
+        <cn.gavinliu.android.lib.shapedimageview.ShapedImageView
+            android:id="@+id/imgThree"
+            android:layout_width="108dp"
+            android:layout_height="108dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="fitXY"
+            android:src="@color/color_f6"
+            android:visibility="gone"
+            app:round_radius="5dp"
+            app:shape_mode="round_rect" />
+
+
+        <ImageView
+            android:id="@+id/iv_delOne"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:scaleType="center"
+            android:src="@drawable/delet_zhaopian_1x" />
+
+        <ImageView
+            android:id="@+id/iv_delTwo"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="3dp"
+            android:scaleType="center"
+            android:src="@drawable/delet_zhaopian_1x" />
+
+        <ImageView
+            android:id="@+id/iv_delThree"
+            android:layout_width="19dp"
+            android:layout_height="19dp"
+            android:layout_alignParentRight="true"
+            android:scaleType="center"
+            android:src="@drawable/delet_zhaopian_1x" />
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/buybuybuy"
+            android:drawableLeft="@drawable/video_icon"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:paddingTop="8dp"
+            android:text="00:00"
+            android:textColor="@color/white"
+            android:textSize="11sp"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/ivTopReturn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/activity_return_img" />
+
+            <LinearLayout
+                android:id="@+id/rlTop"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvTopTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/color_0AAFFA"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/ivTopTitle"
+                    android:layout_width="13dp"
+                    android:layout_height="7dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="6dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/xiafang_img"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/ivTopRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:scaleType="fitXY"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rlTopRight"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivTopRightImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ri_li_normal" />
+
+                <TextView
+                    android:id="@+id/tvTopRightImgYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="2019"
+                    android:textColor="@color/color_0AAFFA"
+                    android:textSize="7sp" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/smartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mPinnedHeaderRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <com.mjgallery.mjgallery.widget.stickyitemdecoration.StickyHeadContainer
+                android:id="@+id/mStickyHeadContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include layout="@layout/lottery_record_item" />
+            </com.mjgallery.mjgallery.widget.stickyitemdecoration.StickyHeadContainer>
+        </RelativeLayout>
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+    <FrameLayout
+        android:id="@+id/flKaJianNull"
+        android:layout_width="299dp"
+        android:layout_height="234dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="90dp"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/kajian_null_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="bottom"
+            android:paddingBottom="21dp"
+            android:text="@string/kajan_null_hint"
+            android:textColor="@color/color_999999"
+            android:textSize="15sp" />
+    </FrameLayout>
+
+</LinearLayout>

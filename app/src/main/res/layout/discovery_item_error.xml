@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center_horizontal"
+    android:paddingTop="80dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="112dp"
+        android:layout_height="112dp"
+        android:src="@drawable/discovery_adapter_error_img2" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/not_data_hint"
+        android:textColor="@color/color_999999"
+        android:layout_marginTop="13dp"
+        android:layout_marginLeft="5dp"
+        android:textSize="15sp"
+        />
+</LinearLayout>

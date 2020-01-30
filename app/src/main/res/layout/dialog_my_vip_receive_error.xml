@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.mjgallery.mjgallery.widget.UIImageView
+        android:id="@+id/ivMyVIPReceiveErrorClose"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="169dp"
+        android:layout_marginRight="45dp"
+        android:src="@drawable/close_img" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="289dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="49dp"
+        android:layout_marginRight="48dp"
+        android:background="@drawable/dialog_my_vip_receive_error_bg"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/btnMyVipReceiveError"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="22dp"
+            android:background="@drawable/my_vip_receive_error_btn_bg"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+    </RelativeLayout>
+</RelativeLayout>

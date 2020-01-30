@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_ECECEC"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_top_bg">
+
+        <include layout="@layout/include_activity_top" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="102dp"
+                android:layout_marginTop="28dp"
+                android:background="@color/white"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/majin_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="@string/setting_feedback_info1"
+                    android:textColor="@color/color_AAAAAA"
+                    android:textSize="15sp" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="13dp"
+                android:text="@string/setting_feedback_info2"
+                android:textColor="@color/color_4C4C4C"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/rlVersionInformation"
+                android:background="@color/color_EFEFEF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center_vertical"
+                        android:minWidth="60dp"
+                        android:text="@string/setting_feedback_info3"
+                        android:textColor="@color/color_4C4C4C"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/etFeedback1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:enabled="false"
+                        android:hint="@string/setting_feedback_info4"
+                        android:textColor="@color/color_AAAAAA"
+                        android:textSize="13sp"
+
+                        />
+
+                </LinearLayout>
+
+
+                <ImageView
+                    android:id="@+id/ivFeedbackImg1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/select_daguo2"></ImageView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/rlVersionInformation"
+                android:background="@color/color_EFEFEF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center_vertical"
+                        android:minWidth="60dp"
+                        android:text="@string/setting_feedback_info5"
+                        android:textColor="@color/color_4C4C4C"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/etFeedback2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:enabled="false"
+                        android:hint="@string/setting_feedback_info6"
+                        android:textColor="@color/color_AAAAAA"
+                        android:textSize="13sp"
+
+                        />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivFeedbackImg2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/select_daguo1"></ImageView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@id/rlVersionInformation"
+                android:background="@color/color_EFEFEF" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="15dp"
+                        android:gravity="center_vertical"
+                        android:minWidth="60dp"
+                        android:text="@string/setting_feedback_info7"
+                        android:textColor="@color/color_4C4C4C"
+                        android:textSize="13sp" />
+
+                    <EditText
+                        android:id="@+id/etFeedback3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:enabled="false"
+                        android:hint="@string/setting_feedback_info8"
+                        android:textColor="@color/color_AAAAAA"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ivFeedbackImg3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:src="@drawable/select_daguo1"></ImageView>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="13dp"
+                android:paddingBottom="2dp"
+                android:text="@string/setting_feedback_info9"
+                android:textColor="@color/color_4C4C4C"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="93dp"
+                android:background="@color/white"
+                android:padding="15dp">
+
+                <EditText
+                    android:id="@+id/etFeedback4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:gravity="top"
+                    android:hint="@string/setting_feedback_info10"
+                    android:textColor="@color/color_2e2e2e"
+                    android:textColorHint="@color/color_B5B5B5"
+                    android:textSize="13sp"
+
+                    />
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="39dp"
+                android:gravity="center_vertical"
+                android:paddingLeft="13dp"
+                android:text="@string/setting_feedback_info11"
+                android:textColor="@color/color_4C4C4C"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/ivUploadImg"
+                    android:layout_width="54dp"
+                    android:layout_height="54dp"
+                    android:src="@drawable/paizao_icon" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="37dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="50dp"
+                android:background="@drawable/btn_0eb4fe_8_bg"
+                android:clickable="true"
+                android:gravity="center"
+                android:text="@string/setting_feedback_info12"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/ivTopReturn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/activity_return_img" />
+
+            <LinearLayout
+                android:id="@+id/rlTop"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvTopTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/color_0AAFFA"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/ivTopTitle"
+                    android:layout_width="13dp"
+                    android:layout_height="7dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="6dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/xiafang_img"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/ivTopRight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="14dp"
+                android:scaleType="fitXY"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rlTopRight"
+                android:layout_width="20dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/ivTopRightImg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ri_li_normal" />
+
+                <TextView
+                    android:id="@+id/tvTopRightImgYear"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="20dp"
+                    android:text="2019"
+                    android:textColor="@color/color_0AAFFA"
+                    android:textSize="7sp" />
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/lottery_data_top">
+
+        <LinearLayout
+            android:id="@+id/llCalendarTopTwo"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/lottery_data_back_img"
+            android:gravity="center_vertical"
+
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llXiangZuo"
+                android:layout_width="40dp"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="18dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/xiang_zuo" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvChaZhaoYear"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+            <TextView
+                android:id="@+id/tvMonthEnglish"
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:gravity="right"
+                android:text="AUG"
+                />
+            <LinearLayout
+                android:id="@+id/llXiangYou"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <ImageView
+                    android:layout_width="10dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="right"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/xiang_you" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.haibin.calendarview.CalendarLayout
+            android:id="@+id/calendarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llCalendarTopTwo"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:layout_marginBottom="25dp"
+            android:orientation="vertical">
+
+            <com.haibin.calendarview.CalendarView
+                android:id="@+id/calendarView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                app:calendar_height="40dp"
+                app:calendar_padding="10dp"
+                app:current_day_text_color="@drawable/btn_22_no"
+                app:current_month_lunar_text_color="#CFCFCF"
+                app:current_month_text_color="@color/black"
+                app:min_year="2004"
+                app:month_view="com.mjgallery.mjgallery.widget.calendar.SimpleMonthView"
+                app:month_view_show_mode="mode_only_current"
+                app:other_month_text_color="@color/black"
+                app:scheme_text="假"
+                app:scheme_text_color="@color/gray"
+                app:scheme_theme_color="@color/gray"
+                app:select_mode="single_mode"
+                app:selected_text_color="#fff"
+                app:selected_theme_color="@drawable/dang_qian_ri_qi"
+                app:week_background="#fff"
+                app:week_text_color="#111"
+                app:week_view="com.mjgallery.mjgallery.widget.calendar.SimpleWeekView"
+                app:year_view_day_text_color="#333333"
+                app:year_view_day_text_size="18sp"
+                app:year_view_month_text_color="#000"
+                app:year_view_month_text_size="15sp"
+                app:year_view_scheme_color="#f17706" />
+
+
+        </com.haibin.calendarview.CalendarLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/lottery_date_txt4"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_open_prize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:text="-----------"
+            android:textColor="@color/color_F05E8E"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="4dp"
+            android:text="@string/lottery_date_txt5"
+            android:textColor="@color/gray"
+            android:textSize="10sp" />
+    </LinearLayout>
+</LinearLayout>

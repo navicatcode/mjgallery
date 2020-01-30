@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="449dp"
+            android:layout_marginLeft="53dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginRight="53dp"
+            android:background="@drawable/shape_33ffffff_10_bg" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="449dp"
+            android:layout_marginLeft="43dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="43dp"
+            android:background="@drawable/shape_33ffffff_10_bg" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="449dp"
+            android:layout_marginLeft="33dp"
+            android:layout_marginRight="33dp"
+            android:background="@drawable/shape_ffffff_20_bg">
+
+            <LinearLayout
+                android:id="@+id/llCalendarTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/llCalendarYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvCalendarYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="2019"
+                            android:textColor="@color/color_0EB4FE"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:layout_width="11dp"
+                            android:layout_height="6dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/calendar_xiang_xia" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <LinearLayout
+                        android:id="@+id/llCalendarMonth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tvCalendarMonth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="1月"
+                            android:textColor="@color/color_0EB4FE"
+                            android:textSize="18sp" />
+
+                        <ImageView
+                            android:layout_width="11dp"
+                            android:layout_height="6dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="5dp"
+                            android:src="@drawable/calendar_xiang_xia" />
+                    </LinearLayout>
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llCalendarTopTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llCalendarTop"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="22dp"
+                    android:gravity="center_vertical"
+                    android:text="将要查找"
+                    android:textColor="@color/color_999999"
+                    android:textSize="13sp" />
+
+                <RelativeLayout
+                    android:layout_width="48dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="4dp"
+                    android:background="@drawable/calendar_year"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tvChaZhaoYear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="3dp"
+                        android:text="2019"
+                        android:textColor="@color/color_999999"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/ivChaZhaoYear"
+                        android:layout_width="10dp"
+                        android:layout_height="7dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@id/tvChaZhaoYear"
+                        android:src="@drawable/calendar_dui_gou" />
+                </RelativeLayout>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:text="年"
+                    android:textColor="@color/color_999999"
+                    android:textSize="14sp" />
+
+                <RelativeLayout
+                    android:layout_width="37dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="13dp"
+                    android:background="@drawable/calendar_month"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tvChaZhaoMonth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="4dp"
+                        android:text="07"
+                        android:textColor="@color/color_999999"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:id="@+id/ivChaZhaoMonth"
+                        android:layout_width="10dp"
+                        android:layout_height="7dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="2dp"
+                        android:layout_toRightOf="@id/tvChaZhaoMonth"
+                        android:src="@drawable/calendar_dui_gou" />
+                </RelativeLayout>
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="8dp"
+                    android:text="月"
+                    android:textColor="@color/color_999999"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <com.haibin.calendarview.CalendarLayout
+                android:id="@+id/calendarLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llCalendarTopTwo"
+                android:layout_marginBottom="25dp"
+                android:orientation="vertical">
+
+                <com.haibin.calendarview.CalendarView
+                    android:id="@+id/calendarView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    app:calendar_height="40dp"
+                    app:calendar_padding="10dp"
+                    app:current_day_text_color="@drawable/dang_qian_ri_qi"
+                    app:current_month_lunar_text_color="#CFCFCF"
+                    app:current_month_text_color="@color/black"
+                    app:min_year="2004"
+                    app:month_view="com.mjgallery.mjgallery.widget.calendar.SimpleMonthView"
+                    app:month_view_show_mode="mode_only_current"
+                    app:other_month_text_color="@color/black"
+                    app:scheme_text="假"
+                    app:scheme_text_color="@color/gray"
+                    app:scheme_theme_color="@color/gray"
+                    app:select_mode="single_mode"
+                    app:selected_text_color="#fff"
+                    app:selected_theme_color="@drawable/dang_qian_ri_qi"
+                    app:week_background="#fff"
+                    app:week_text_color="#111"
+                    app:week_view="com.mjgallery.mjgallery.widget.calendar.SimpleWeekView"
+                    app:year_view_day_text_color="#333333"
+                    app:year_view_day_text_size="9sp"
+                    app:year_view_month_text_color="#000"
+                    app:year_view_month_text_size="20sp"
+                    app:year_view_scheme_color="#f17706" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/lottery_date_txt4"
+                            android:textColor="@color/black"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_open_prize"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="5dp"
+                            android:text="@string/lottery_date_txt6"
+                            android:textColor="#F05E8E"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </com.haibin.calendarview.CalendarLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

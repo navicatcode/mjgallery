@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/item_bg"
+    android:paddingLeft="17dp"
+    android:paddingRight="19dp"
+    android:id="@+id/llItemAll"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/ivStatusImg"
+            android:layout_width="43dp"
+            android:layout_height="43dp"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/mine_user_normal_img"
+            android:scaleType="fitXY" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:minWidth="150dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="22dp"
+            >
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/ivMyAttentionUserImg"
+                android:textColor="@color/color_333333"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/ivMyAttentionUserImg"
+                android:textColor="@color/color_B8B8B8"
+                android:layout_marginTop="7dp"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            >
+
+            <TextView
+                android:id="@+id/tvMoney"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/ivMyAttentionUserImg"
+                android:textColor="@color/color_0AAFFA"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tvOrderNo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+
+                android:layout_toRightOf="@id/ivMyAttentionUserImg"
+                android:textColor="@color/color_B8B8B8"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

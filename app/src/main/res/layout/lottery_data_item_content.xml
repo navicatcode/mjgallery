@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/ivLotteryDataItem"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/lottery_data_item_content_bg" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="13dp">
+
+        <TextView
+            android:id="@+id/tvLotteryDataContentO1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_333333"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tvLotteryDataContentO2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/tvLotteryDataContentO1"
+            android:textColor="@color/color_8F8F8F"
+            android:textSize="13sp"  />
+
+        <TextView
+            android:id="@+id/tvLotteryDataContentO3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="16dp"
+            android:textColor="@color/color_333333"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/color_E2E2E2" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/mRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="42dp"
+        android:layout_marginTop="7dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        android:paddingLeft="13dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lottery_data_contentO3"
+            android:textColor="@color/color_8f8f8f"
+            android:textSize="13sp"  />
+
+        <TextView
+            android:id="@+id/tvLotteryDataContent03qishu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_E00000"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lottery_data_contentO4"
+            android:textColor="@color/color_8f8f8f"
+            android:textSize="13sp"  />
+
+        <TextView
+            android:id="@+id/tvLotteryDataContent03riqi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_E00000"
+            android:textSize="13sp"  />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lottery_data_contentO5"
+            android:textColor="@color/color_8f8f8f"
+            android:textSize="13sp"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        android:paddingLeft="13dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lottery_data_contentO3"
+            android:textColor="@color/color_8f8f8f"
+            android:textSize="13sp"  />
+
+        <TextView
+            android:id="@+id/tvLotteryDataContent04qishu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_E00000"
+            android:textSize="13sp"  />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lottery_data_contentO6"
+            android:textColor="@color/color_8f8f8f"
+            android:textSize="13sp"  />
+
+        <TextView
+            android:id="@+id/tvLotteryDataContent04riqi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/color_E00000"
+            android:textSize="13sp"  />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lottery_data_contentO7"
+            android:textColor="@color/color_8f8f8f"
+            android:textSize="13sp" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/home_top_bg">
+
+        <include layout="@layout/include_activity_top" />
+    </RelativeLayout>
+    <!--广告图-->
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        app:indicator_drawable_selected="@drawable/indicator_drawable_selected"
+        app:indicator_drawable_unselected="@drawable/indicator_drawable_unselected"
+        android:layout_width="match_parent"
+        app:indicator_height="4dp"
+        android:layout_height="110dp"  />
+
+    <!--通知跑马灯-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp">
+
+        <ImageView
+            android:id="@+id/ivAnnouncement"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/home_gonggao_img"
+            android:contentDescription="TODO" />
+
+        <com.mjgallery.mjgallery.widget.MarqueeView
+            android:id="@+id/tvAnnouncement"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/ivAnnouncement"
+            android:ellipsize="end"
+            android:focusable="false"
+            android:marqueeRepeatLimit="-1"
+            android:singleLine="true"
+            app:marqueeview_repet_type="repet_continuous"
+            app:marqueeview_text_color="@color/color_888888"
+            app:marqueeview_text_size="16"
+            app:marqueeview_text_speed="2" />
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/color_E3E3E3"
+        />
+    <!-- 新手任务列表 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_marginBottom="5dp"
+        >
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="14dp"
+            android:background="@color/color_10B4FE"
+            android:layout_marginBottom="3dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vip_taks_hint1"
+            android:layout_marginLeft="6dp"
+            android:textColor="@color/color_10B4FE"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/color_E3E3E3"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        />
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:divider="@color/color_00000000"
+        android:dividerHeight="0.8dp"
+        android:listSelector="@android:color/transparent"
+        android:id="@+id/listNewbieTask"
+        />
+    <!-- 日常任务列表 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="bottom"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        >
+        <ImageView
+            android:layout_width="5dp"
+            android:layout_height="14dp"
+            android:background="@color/color_10B4FE"
+            android:layout_marginBottom="3dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vip_taks_hint2"
+            android:layout_marginLeft="6dp"
+            android:textColor="@color/color_10B4FE"
+            android:textSize="16sp"
+            />
+    </LinearLayout>
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/mSmartRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

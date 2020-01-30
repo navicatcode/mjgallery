@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/color_ECECEC" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="4dp"
+        android:paddingLeft="14dp"
+        android:paddingRight="9dp">
+
+        <TextView
+            android:id="@+id/tvCollectionMultiItemDiscoveryVideoTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/color_666666"
+            android:textSize="14sp" />
+
+        <com.mjgallery.mjgallery.widget.UIImageView
+            android:id="@+id/ivCollectionMultiItemDiscoveryVideoDelete"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/collection_multi_item_delete" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tl="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:background="@color/color_0AAFFA">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true"
+            android:paddingRight="15dp">
+
+            <ImageView
+                android:id="@+id/ivTopReturn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/activity_return_while_img" />
+
+            <RelativeLayout
+                android:layout_width="248dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/shape_ffffff_8_bg"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:paddingLeft="9dp">
+
+                <ImageView
+                    android:id="@+id/ivSearchImg"
+                    android:layout_width="12dp"
+                    android:layout_height="12dp"
+                    android:layout_centerVertical="true"
+
+
+                    android:scaleType="center"
+                    android:src="@drawable/seacher_img" />
+
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="21dp"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:hint="@string/app_name"
+                    android:textColor="@color/color_0AAFFA"
+                    android:textColorHint="@color/color_8adaff"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlSearchBtn"
+                android:layout_width="46dp"
+                android:layout_height="25dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/btn_ffffff_8_bg_xiaogou">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="搜索"
+                    android:textColor="@color/color_0AAFFA"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+6
+    </RelativeLayout>
+
+    <com.flyco.tablayout.SlidingTabLayout
+        android:id="@+id/mSlidingTabLayoutSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_0AAFFA"
+        android:paddingBottom="2dp"
+        app:tl_indicator_color="@color/white"
+        app:tl_indicator_width_equal_title="true"
+        app:tl_tab_space_equal="true"
+        app:tl_textSelectColor="@color/white"
+        app:tl_textUnselectColor="@color/white"
+        app:tl_textsize="15sp"
+        tl:tl_divider_color="#ffffff"
+        tl:tl_divider_width="1dp"
+        tl:tl_indicator_anim_enable="true"
+        tl:tl_indicator_bounce_enable="true"
+        tl:tl_indicator_height="1dp"
+        tl:tl_indicator_width_equal_title="true"
+        tl:tl_tab_space_equal="true"
+        tl:tl_underline_color="#ffffff"
+        tl:tl_underline_height="1dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:background="@color/color_0AAFFA" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/mViewPagerSearch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" />
+</LinearLayout>

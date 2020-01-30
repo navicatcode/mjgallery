@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:ignore="MissingDefaultResource">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_dialog_gray"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/man"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="@string/male"
+            android:textColor="#ff3695d4"
+            android:textSize="16sp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#BDC0CB" />
+
+        <TextView
+            android:id="@+id/woman"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:background="@android:color/transparent"
+            android:gravity="center"
+            android:text="@string/female"
+            android:textColor="#ff3695d4"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/cancle"
+        android:layout_width="match_parent"
+        android:layout_height="57dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/shape_dialog_white"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="#ff172a92"
+        android:textSize="16sp" />
+
+
+</LinearLayout>

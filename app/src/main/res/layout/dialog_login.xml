@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llAll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llAllLogin"
+        android:layout_width="349dp"
+        android:layout_height="369dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="132dp"
+        android:background="@drawable/login_bg_one_img"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="135dp"
+            android:gravity="center_horizontal"
+            android:text="@string/you_are_logged_yet"
+            android:textColor="@color/color_050505"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center_horizontal"
+            android:text="@string/dialog_login_title"
+            android:textColor="@color/color_B8B2B2"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:id="@+id/rlLogin"
+            android:layout_width="match_parent"
+            android:layout_height="53dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="28dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginRight="29dp"
+            android:background="@drawable/shape_62ceff_10_bg_onclick"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="27dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="3dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/login_wx_bg_img" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="3dp"
+                android:gravity="center"
+                android:text="@string/wechat_log_in"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="7dp"
+            >
+
+            <TextView
+                android:id="@+id/tvPhoneLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dp"
+                android:paddingTop="17dp"
+                android:text="@string/mobile_phone_login"
+                android:textColor="@color/color_B8B2B2"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/tvForgotPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingTop="17dp"
+                android:text="@string/phone_registratio_text"
+                android:textColor="@color/color_B8B2B2"
+                android:textSize="20sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

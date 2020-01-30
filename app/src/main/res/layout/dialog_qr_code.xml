@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/llAll"
+        android:layout_width="match_parent"
+        android:layout_height="501dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="17dp"
+        android:background="@drawable/shape_ffffff_20_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="71dp"
+            android:text="@string/my_invitation_code"
+            android:textColor="@color/color_27347D"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvInvitationCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:text="--"
+            android:textColor="@color/color_212C67"
+            android:textSize="14dp" />
+
+        <RelativeLayout
+            android:id="@+id/SaveLocal"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="91dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginRight="91dp"
+            android:background="@drawable/shape_52c8f9_21_bg">
+
+            <ImageView
+                android:id="@+id/ivXiaZai"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="25dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/xiazai_img" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/save_local"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvCopyInvitationCode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="14dp"
+            android:text="@string/click_copy_qr_code"
+            android:textColor="@color/color_212C67"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:layout_width="235dp"
+            android:layout_height="232dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/code_img"
+            android:gravity="center_horizontal">
+
+            <ImageView
+                android:id="@+id/ivQRCode"
+                android:layout_width="178dp"
+                android:layout_height="178dp"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="107dp"
+        android:layout_height="107dp"
+
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/mine_user_img_shape">
+
+        <ImageView
+            android:id="@+id/ivMineUserImg"
+            android:layout_width="104dp"
+            android:layout_height="104dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="2dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/mine_user_normal_img" />
+    </RelativeLayout>
+</RelativeLayout>
