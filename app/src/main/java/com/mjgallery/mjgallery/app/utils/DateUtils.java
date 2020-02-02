@@ -342,22 +342,30 @@ public class DateUtils {
         // 获取指定日期转换成星期几
         switch (simpleDateFormat.format(new Date(System.currentTimeMillis()))) {
             case "1":
+            case "01":
                 return ArmsUtils.getString(context, R.string.chinese_month_01);
             case "2":
+            case "02":
                 return ArmsUtils.getString(context, R.string.chinese_month_02);
             case "3":
+            case "03":
                 return ArmsUtils.getString(context, R.string.chinese_month_03);
             case "4":
+            case "04":
                 return ArmsUtils.getString(context, R.string.chinese_month_04);
             case "5":
+            case "05":
                 return ArmsUtils.getString(context, R.string.chinese_month_05);
             case "6":
+            case "06":
                 return ArmsUtils.getString(context, R.string.chinese_month_06);
             case "7":
+            case "07":
                 return ArmsUtils.getString(context, R.string.chinese_month_07);
             case "8":
+            case "08":
                 return ArmsUtils.getString(context, R.string.chinese_month_08);
-            case "9":
+            case "09":
                 return ArmsUtils.getString(context, R.string.chinese_month_09);
             case "10":
                 return ArmsUtils.getString(context, R.string.chinese_month_10);
@@ -369,6 +377,46 @@ public class DateUtils {
          return ArmsUtils.getString(context, R.string.chinese_month_01);
     }
 
+    public static String getChineseMonthThree(Context context) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM");     // 北京时间小时
+        simpleDateFormat.setTimeZone(TimeZone.getTimeZone("Asia/Shanghai"));  // 设置北京时区
+        // 获取指定日期转换成星期几
+        switch (simpleDateFormat.format(new Date(System.currentTimeMillis()))) {
+            case "1":
+            case "01":
+                return "1";
+            case "2":
+            case "02":
+                return "2";
+            case "3":
+            case "03":
+                return "3";
+            case "4":
+            case "04":
+                return "4";
+            case "5":
+            case "05":
+                return "5";
+            case "6":
+            case "06":
+                return "6";
+            case "7":
+            case "07":
+                return "7";
+            case "8":
+            case "08":
+                return "8";
+            case "09":
+                return "9";
+            case "10":
+                return "10";
+            case "11":
+                return "11";
+            case "12":
+                return "12";
+        }
+        return "1";
+    }
 
 
     public static String getChineseMonthTwo(Context context) {

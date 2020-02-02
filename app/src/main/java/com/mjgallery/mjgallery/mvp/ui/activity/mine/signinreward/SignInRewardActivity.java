@@ -197,7 +197,8 @@ public class SignInRewardActivity extends BaseActivity<SignInRewardPresenter> im
         StringBuffer stringBufferInRewardYears = new StringBuffer();
         stringBufferInRewardYears.append(year);
         stringBufferInRewardYears.append(ArmsUtils.getString(getBaseContext(), R.string.year));
-        stringBufferInRewardYears.append(DateUtils.getChineseMonth(getBaseContext()));
+        stringBufferInRewardYears.append(DateUtils.getChineseMonthThree(getBaseContext()));
+        stringBufferInRewardYears.append("月");
         tvSignInRewardYears.setText(stringBufferInRewardYears.toString());
         mCalendarView.setOnCalendarSelectListener(this);
         mCalendarView.setOnMonthChangeListener(this);
